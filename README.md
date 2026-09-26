@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/synci-mark.svg" alt="Synci" width="80" />
+  <img src="media/synci-mark.svg" alt="Synci" width="80" />
 </p>
 
 <h1 align="center">Synci for Raycast</h1>
