@@ -1,0 +1,26 @@
+name: Check extension
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.23.2"
+          cache: npm
+      - run: npm ci
+      - run: npx ray build -e dist -o dist
+      - run: npm run typecheck
+      - run: npm test
+      # Synci's organization lookup requires an authenticated Raycast maintainer.
+      # Keep public CI credential-free; run full `npm run lint` before release.
+      - run: npm run lint:source
