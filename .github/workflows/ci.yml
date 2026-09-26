@@ -21,6 +21,4 @@ jobs:
       - run: npx ray build -e dist -o dist
       - run: npm run typecheck
       - run: npm test
-      # Synci's organization lookup requires an authenticated Raycast maintainer.
-      # Keep public CI credential-free; run full `npm run lint` before release.
       - run: npm run lint:source
