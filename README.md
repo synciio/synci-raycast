@@ -88,7 +88,7 @@ You can also assign your own hotkeys and aliases in Raycast.
 
 ## Get started
 
-The extension is currently available to [install from source](CONTRIBUTING.md#set-up). A Raycast Store release is coming soon.
+Install [Synci from the Raycast Store](https://www.raycast.com/tonning/synci), or [install it from source](CONTRIBUTING.md#set-up) if you want to work on it.
 
 1. Connect your accounts in [Synci](https://synci.io).
 2. Open a Synci command in Raycast and choose **Sign in with Synci**.
